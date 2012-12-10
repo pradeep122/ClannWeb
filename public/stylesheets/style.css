@@ -1,0 +1,28 @@
+
+// varialbles
+@para-font : 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+body {
+  padding: 50px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#result-tree-wrapper{
+    height: 80%;
+    overflow: auto;
+}
+
+#result-tree{
+    max-height: 28em;
+    overflow: auto;
+}
+
+#editor{
+    width: 100%;
+    height: 26em;
+    max-height: 28em;
+    
+}

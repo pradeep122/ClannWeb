@@ -1,0 +1,55 @@
+!!!
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    //link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/stylesheets/content-assist.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/jquery-1.6.2.min.js')
+    script(src='/javascripts/jsdump.js')
+    script(src='/javascripts/content_assist/tx_utils.js')
+    script(src='/javascripts/content_assist/EventDispatcher.js')
+    script(src='/javascripts/content_assist/TextViewer.js')
+    script(src='/javascripts/content_assist/CompletionProposal.js')
+    script(src='/javascripts/rdf_store_min.js')
+    script(src='/javascripts/ContentAssistProcessor.js')
+    script(src='/javascripts/ContentAssist.js')
+    script(src='/javascripts/clannParser.js')
+    //script(src='/javascripts/bootstrap.js')
+    script(src='/javascripts/controller.js')
+  body
+    #container.container
+      .row-fluid
+        .span12
+          h2 Content assisted Control Language text editor for authoring meeting minutes
+          p
+            a(href="http://smile.deri.ie/clann") CLANN 
+            | , short for Controlled Language ANNotator, is powerful web-based
+            | control language editor for. It uses structured approach where appearance can be highly customized with 
+            | HTML/CSS templates. Creation of a language is based on defining specific metamodel and optionally javascript plugins.
+
+          p
+            | This project is simple free-text editor with code completion for CLANN. Main idea was to create language looks similar to natural language. It is not polished too much but it shows the concept. Source code is available on
+            a(href="http://github.com/pradeep122/Clann") Clann project page. 
+
+          p
+            | The implementation of the editor is adapted from 
+            a(href="http://eutechne.stefaniuk.info/") Marcin Stefaniuk
+            | 's work on DSL free-text editors. Some details about his implementation can be found on  
+            a(href="http://eutechne.stefaniuk.info/2011/10/dsl-editor-with-code-completion-in.html") DSL editor with code completion
+            | entry on his blog.
+
+          p
+            | Dedicated language to edit meeting minutes has been designed to look very similar to natural English constructs used in a corpus of meeting minutes from the Nepomuk project.
+      .row-fluid
+        #input-wrapper.span6
+          h3 Control Language input
+          textarea#editor(rows = "25")
+            | Pradeep will complete his thesis by next year.
+            | Brian[same as "Brian Davis"] will attend ISWC by next week.
+          .row-fluid
+            #message.span12
+        #result-tree-wrapper.span6
+          h3 CLANN result tree
+            pre(id="result-tree") No result tree.
